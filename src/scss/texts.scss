@@ -1,0 +1,40 @@
+@import 'fonts/fonts';
+
+@import 'fonts/fonts';
+
+@import 'variables/colors';
+
+.title {
+  font-weight: bold;
+  font-size: 64px;
+  color: $white;
+  font-family: 'Montserrat';
+}
+
+.title-medium {
+  font-weight: bold;
+  font-size: 42px;
+  color: $white;
+  font-family: 'Montserrat';
+}
+
+.title-medium-b {
+  font-weight: bold;
+  font-size: 28px;
+  color: $mine-shaft;
+  font-family: 'Montserrat';
+}
+
+.title-small {
+  font-weight: bold;
+  font-size: 32px;
+  color: $white;
+  font-family: 'Montserrat';
+}
+
+.title-small-b {
+  font-weight: bold;
+  font-size: 24px;
+  color: $mine-shaft;
+  font-family: 'Montserrat';
+}
