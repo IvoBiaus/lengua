@@ -1,0 +1,54 @@
+@import 'variables/colors';
+
+@import 'variables/variables';
+
+.button {
+  border-radius: 200px;
+  display: inline-block;
+  font-size: 15px;
+  height: 40px;
+  width: 200px;
+  border: 0;
+  text-align: center;
+  transition: all $transition-duration $transition-function;
+
+  &:disabled {
+    background-color: $dove-gray;
+    color: $mine-shaft;
+    cursor: not-allowed;
+  }
+
+  &.primary {
+    background-color: $white;
+    color: $black;
+
+    &:hover,
+    &:active {
+      border: 3px solid $white;
+      background-color: $lightning-yellow;
+      color: $white;
+    }
+  }
+
+  &.secondary {
+    background-color: $black;
+    color: $white;
+
+    &:hover,
+    &:active {
+      border: 3px solid $white;
+      background-color: $lightning-yellow;
+    }
+  }
+
+  &.terciary {
+    background-color: $lightning-yellow;
+    color: $black;
+
+    &:hover,
+    &:active {
+      border: 3px solid $black;
+      background-color: $white;
+    }
+  }
+}
