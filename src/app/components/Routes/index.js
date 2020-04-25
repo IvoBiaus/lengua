@@ -6,6 +6,7 @@ import styles from './styles.module.scss';
 import Suspense from "../Suspense";
 
 const Home = lazy(() => import('@/app/screens/Home'));
+const Scores = lazy(() => import('@/app/screens/Scores'));
 
 function AppRoutes() {
   return (
@@ -13,7 +14,7 @@ function AppRoutes() {
       <div className={styles.container}>
         <Suspense>
           <Switch>
-            <Route isPrivateRoute path={Routes.HOME} component={Home} />
+            <Route exact path={Routes.HOME} component={Home} />
           </Switch>
         </Suspense>
       </div>
