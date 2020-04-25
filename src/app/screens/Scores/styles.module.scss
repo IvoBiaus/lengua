@@ -9,9 +9,10 @@
   width: 250px;
 }
 
-.input {
-  background-color: transparent;
-  border: 0 none $white;
-  border-bottom: 3px solid $white;
-  border-radius: 0;
+.image {
+  transform: rotateY(-180deg);
+}
+
+.usersContainer {
+  overflow: auto;
 }
