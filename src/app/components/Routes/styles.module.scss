@@ -1,3 +1,6 @@
+@import '../../../scss/variables/colors';
+
 .container {
   height: 100vh;
+  background-color: $lightning-yellow;
 }
