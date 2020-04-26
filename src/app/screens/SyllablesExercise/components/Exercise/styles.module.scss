@@ -1,0 +1,12 @@
+@import '../../../../../scss/variables/colors';
+
+.box {
+  border: solid;
+  border-radius: 20px;
+}
+
+.syllable {
+  @extend .box;
+  cursor: pointer;
+  padding: 10px;
+}
