@@ -17,7 +17,7 @@ function Scores() {
   return (
     <div className='item-1 full-height row p-left-10 p-right-10'>
       <div className='item-1 column center bottom'>
-        <img className={`half-width ${styles.image}`} src={Dog} alt="loading..." />
+        <img className={`half-width ${styles.image}`} src={Dog} alt="Scores" />
       </div>
       <div className='item-1 column space-around center p-top-5 p-bottom-5'>
         <h1 className='title'>¡ PUNTAJES !</h1>
