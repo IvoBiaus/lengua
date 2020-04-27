@@ -37,7 +37,7 @@ function Exercise({data}) {
         }
       </div>
       <Spacer width={25}/>
-      <span>Respuesta: </span>
+      <span>Tu respuesta: </span>
       <Spacer width={25}/>
       <div className={`row full-height ${styles.box}`}>
         {
