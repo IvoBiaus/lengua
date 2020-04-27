@@ -15,7 +15,7 @@ function Scores() {
   }
 
   return (
-    <div className={`item-1 full-height row p-left-10 p-right-10 ${styles.mainContainer}`}>
+    <div className='item-1 full-height row p-left-10 p-right-10'>
       <div className='item-1 column center bottom'>
         <img className={`half-width ${styles.image}`} src={Dog} alt="loading..." />
       </div>
