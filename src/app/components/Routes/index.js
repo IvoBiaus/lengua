@@ -15,6 +15,7 @@ function AppRoutes() {
         <Suspense>
           <Switch>
             <Route exact path={Routes.HOME} component={Home} />
+            <Route exact path={Routes.SCORES} component={Scores} />
           </Switch>
         </Suspense>
       </div>
