@@ -13,7 +13,6 @@ function SyllablesExercise() {
   const [lvlData, setlvlData] = useState([...LEVELS[0]]);
 
   const handleNext = () => {
-    console.log(LEVELS[0]);
     if(currentLvl < 3){
       setCurrentLvl(currentLvl+1);
       setlvlData([...LEVELS[currentLvl]]);

@@ -10,7 +10,7 @@ function Home() {
   const history = useHistory();
 
   const hanldeSubmit = () => {
-    history.push(Routes.SYLLABLES); // TODO in the future change this route for the onboarding route
+    history.push(Routes.ONBOARDING);
   }
 
   const handleViewScore = () => {
@@ -20,7 +20,7 @@ function Home() {
   return (
     <div className='item-1 full-height row p-left-10 p-right-10'>
       <div className='item-1 column bottom'>
-        <img className='full-width' src={Cat} alt="loading..." />
+        <img className='full-width' src={Cat} alt="Home" />
       </div>
       <div className='item-1 column middle'>
         <h1 className='title'>Hola ! Como te llamas ?</h1>
