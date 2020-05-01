@@ -15,14 +15,14 @@ function Scores() {
   }
 
   return (
-    <div className='item-1 full-height row p-left-10 p-right-10'>
-      <div className='item-1 column center bottom'>
+    <div className={`item-1 full-height row p-left-10 p-right-10 ${styles.mainContainer}`}>
+      <div className={`item-1 column center bottom ${styles.imageContainer}`}>
         <img className={`half-width ${styles.image}`} src={Dog} alt="Scores" />
       </div>
       <div className='item-1 column space-around center p-top-5 p-bottom-5'>
         <h1 className='title'>¡ PUNTAJES !</h1>
         <Spacer height={20}/>
-        <div className={`item-1 full-width p-right-4 column space-between ${styles.usersContainer}`}>
+        <div className={`item-1 full-width p-right-4 column space-around ${styles.usersContainer}`}>
           {MOCKED_USERS.map((item, index) => <UserScore position={index+1} user={item.user} score={item.score}/>)}
         </div>
         <Spacer height={20}/>

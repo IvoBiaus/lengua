@@ -10,8 +10,9 @@ function Exercise({data}) {
   const addToAnswer = (syllable) => {
     const index = unused.indexOf(syllable);
     if (index > -1) {
-      unused.splice(index, 1)
-      setUnused([...unused]);
+      //TODO disable handle once the option is selected. Create a sub-component for the Syllable
+      //unused.splice(index, 1)
+      //setUnused([...unused]);
     }
 
     userAnswer.push(syllable)
@@ -24,32 +25,35 @@ function Exercise({data}) {
       userAnswer.splice(index, 1)
       setUserAnswer([...userAnswer]);
     }
-
-    unused.push(syllable)
-    setUnused([...unused]);
+    //TODO enable handle once the option is selected. Create a sub-component for the Syllable
+    //unused.push(syllable)
+    //setUnused([...unused]);
   }
 
   return (
-    <div className='row space-around middle'>
-      <div className='row'>
+    <div className={`space-around middle ${styles.mainContainer}`}>
+      <div className='row center'>
         {
           unused.map((item) => <span className={`title-medium m-right-5 ${styles.syllable}`} onClick={() => addToAnswer(item)} >{item}</span>)
         }
       </div>
-      <Spacer width={25}/>
-      <span>Tu respuesta: </span>
-      <Spacer width={25}/>
-      <div className={`row full-height ${styles.box}`}>
-        {
-          userAnswer.map((item) => (
-            <>
-              <span className={`title-medium  ${styles.syllable}`} onClick={() => removeFromAnswer(item)} >{item}</span>
-              <Spacer width={5}/>
-            </>
+      <Spacer width={25} height={30}/>
+      <div className={`full-height ${styles.answer}`}>
+        <span class="row middle center">Tu respuesta: </span>
+        <Spacer width={25} height={25}/>
+        <div className={`row ${styles.box}`}>
+          {
+            userAnswer.map((item) => (
+              <>
+                <span className={`title-medium  ${styles.syllable}`} onClick={() => removeFromAnswer(item)} >{item}</span>
+                <Spacer width={5}/>
+              </>
+            )
           )
-        )
-        }
+          }
+        </div>
       </div>
+    <Spacer height={40}/>
     </div>
   );
 }

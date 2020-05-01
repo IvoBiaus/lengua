@@ -2,12 +2,20 @@
 $min: 1;
 $max: 100;
 
+$scale: 1;
+
 // width
 
 @for $i from $min through $max {
 
   .width-#{$i} {
     width: #{$i}px;
+  }
+
+  @media (max-device-width: 600px) {
+    .width-#{$i} {
+      width: #{$i / 2}px;
+    }  
   }
 }
 
@@ -17,6 +25,12 @@ $max: 100;
 
   .height-#{$i} {
     height: #{$i}px;
+  }
+
+  @media (max-device-width: 600px) {
+    .height-#{$i} {
+      height: #{$i / 2}px;
+    }
   }
 }
 

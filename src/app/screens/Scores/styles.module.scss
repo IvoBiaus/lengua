@@ -10,3 +10,13 @@
 .usersContainer {
   overflow: auto;
 }
+
+@media (max-device-width: 600px) {
+  .mainContainer {
+    flex-direction: column-reverse;
+  }
+
+  .imageContainer {
+    display: none;
+  }
+}

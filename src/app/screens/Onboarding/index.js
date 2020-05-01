@@ -21,7 +21,7 @@ function Onboarding() {
   }
 
   return (
-    <div className='item-1 full-height column bottom middle p-left-10 p-right-10'>
+    <div className={`item-1 full-height column p-left-10 p-right-10 ${styles.mainContainer}`}>
       <Spacer height={30}/>
       <div className='column middle center'>
         <h1 className='title-medium'>{STEPS[step].title}</h1>

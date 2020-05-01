@@ -1,84 +1,76 @@
 /* stylelint-disable selector-class-pattern  */
-$breakpoint-tablet: 768px;
-$breakpoint-desktop: 1024px;
 
-$bt-scale: null;
-$bd-scale: null;
+$bm-scale: 2;
+$bd-scale: 5;
 
-@media (max-width: $breakpoint-tablet) {
-  $bt-scale: 5;
-}
-
-@media (min-width: $breakpoint-desktop) {
-  $bd-scale: 5;
-}
-
-$scale: $bt-scale or $bd-scale or 5;
-
-$min-top: 5;
-$max-top: 150;
-
-$min-right: 5;
-$max-right: 150;
-
-$min-bottom: 5;
-$max-bottom: 150;
-
-$min-left: 5;
-$max-left: 150;
+$min: 2;
+$max: 100;
 
 // Top margins
 
-@if $min-top > 0 {
-  $unscaled-min-top: $min-top / $scale;
-  $unscaled-max-top: $max-top / $scale;
-
-  @for $i from $unscaled-min-top through $unscaled-max-top {
+@if $min > 0 {
+  @for $i from $min through $max {
 
     .m-top-#{$i} {
-      margin-top: #{$i * $scale}px;
+      margin-top: #{$i * $bd-scale}px;
     }
+
+    @media (max-device-width: 600px) {
+      .m-top-#{$i} {
+        margin-top: #{$i * $bm-scale}px;
+      }
+    }
+    
   }
 }
 
 // Right margins
 
-@if $min-right > 0 {
-  $unscaled-min-right: $min-right / $scale;
-  $unscaled-max-right: $max-right / $scale;
-
-  @for $i from $unscaled-min-right through $unscaled-max-right {
+@if $min > 0 {
+  @for $i from $min through $max {
 
     .m-right-#{$i} {
-      margin-right: #{$i * $scale}px;
+      margin-right: #{$i * $bd-scale}px;
+    }
+
+    @media (max-device-width: 600px) {
+      .m-right-#{$i} {
+        margin-right: #{$i * $bm-scale}px;
+      }
     }
   }
 }
 
 // Bottom margins
 
-@if $min-bottom > 0 {
-  $unscaled-min-bottom: $min-bottom / $scale;
-  $unscaled-max-bottom: $max-bottom / $scale;
-
-  @for $i from $unscaled-min-bottom through $unscaled-max-bottom {
+@if $min > 0 {
+  @for $i from $min through $max {
 
     .m-bottom-#{$i} {
-      margin-bottom: #{$i * $scale}px;
+      margin-bottom: #{$i * $bd-scale}px;
+    }
+
+    @media (max-device-width: 600px) {
+      .m-bottom-#{$i} {
+        margin-bottom: #{$i * $bm-scale}px;
+      }
     }
   }
 }
 
 // Left margins
 
-@if $min-left > 0 {
-  $unscaled-min-left: $min-left / $scale;
-  $unscaled-max-left: $max-left / $scale;
-
-  @for $i from $unscaled-min-left through $unscaled-max-left {
+@if $min > 0 {
+  @for $i from $min through $max {
 
     .m-left-#{$i} {
-      margin-left: #{$i * $scale}px;
+      margin-left: #{$i * $bd-scale}px;
+    }
+
+    @media (max-device-width: 600px) {
+      .m-left-#{$i} {
+        margin-left: #{$i * $bm-scale}px;
+      }
     }
   }
 }

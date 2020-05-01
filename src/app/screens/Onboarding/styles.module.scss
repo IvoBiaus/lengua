@@ -1,4 +1,14 @@
+.mainContainer {
+  justify-content: flex-end;
+}
+
 .image {
   max-height: 565px;
   max-width: 420px;
+}
+
+@media (max-device-width: 600px) {
+  .mainContainer {
+    justify-content: space-around;
+  }
 }
