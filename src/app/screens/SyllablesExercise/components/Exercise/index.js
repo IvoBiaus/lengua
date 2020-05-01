@@ -31,14 +31,14 @@ function Exercise({data}) {
   }
 
   return (
-    <div className={`space-around middle ${styles.mainContainer}`}>
+    <div className={`full-width ${styles.mainContainer}`}>
       <div className='row center'>
         {
           unused.map((item) => <span className={`title-medium m-right-5 ${styles.syllable}`} onClick={() => addToAnswer(item)} >{item}</span>)
         }
       </div>
       <Spacer width={25} height={30}/>
-      <div className={`full-height ${styles.answer}`}>
+      <div className={`full-height column center ${styles.answer}`}>
         <span class="row middle center">Tu respuesta: </span>
         <Spacer width={25} height={25}/>
         <div className={`row ${styles.box}`}>
