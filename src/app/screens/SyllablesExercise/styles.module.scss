@@ -1,0 +1,16 @@
+.mainContainer {
+  align-items: flex-end;
+}
+
+
+
+@media (max-device-width: 600px) {
+  .mainContainer {
+    align-items: center;
+  }
+
+  .exercisesContainer {
+    overflow: auto;
+    flex-flow: wrap;
+  }
+}
