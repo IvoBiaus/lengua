@@ -22,19 +22,19 @@ function Home() {
       <div className={`item-1 column bottom ${styles.image}`}>
         <img className='full-width' src={Cat} alt="Home" />
       </div>
-      <div className={`item-1 space-between column middle ${styles.formContainer}`}>
-      <Spacer height={40}/>
+      <div className={`item-1 column middle ${styles.formContainer}`}>
+      <Spacer height={40} responsive={false}/>
         <h1 className='title'>Hola ! Como te llamas?</h1>
-        <Spacer height={70}/>
+        <Spacer height={70} responsive={false}/>
         <form className={`column ${styles.form}`} id='login-form' onSubmit={hanldeSubmit}>
           <input className={`title half-width ${styles.input}`} type="text" name="name" placeholder='Nombre'/>
-          <Spacer height={20}/>
+          <Spacer height={20} responsive={false}/>
           <input className={`title half-width ${styles.input}`} type="text" name="lastname" placeholder='Apellido'/>
-          <Spacer height={70}/>
+          <Spacer height={70} responsive={false}/>
         </form>
         <div>
           <button className={`button primary ${styles.button}`} type="submit" form="login-form">INGRESAR</button>
-          <Spacer height={20}/>
+          <Spacer height={20} responsive={false}/>
           <button className={`button secondary ${styles.button}`} onClick={handleViewScore}>VER PUNTAJES</button>
         </div>
       </div>
