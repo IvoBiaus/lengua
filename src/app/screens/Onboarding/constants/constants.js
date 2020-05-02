@@ -4,7 +4,7 @@ import CatWalking from '../assets/cat-walking.gif';
 const pageOne = {
   image: CatHappy,
   title: 'Bienvenido !',
-  subtitle: 'Vamos a hacer unos ejercicios de matemática... Estas listo ?'
+  subtitle: 'Vamos a hacer unos ejercicios de lengua... Estas listo ?'
 };
 
 const pageTwo = {

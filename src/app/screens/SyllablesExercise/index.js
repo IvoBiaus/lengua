@@ -25,10 +25,14 @@ function SyllablesExercise() {
 
   return (
     <div className={`item-1 full-height column space-around p-left-10 p-right-10 ${styles.mainContainer}`}>
-      <Spacer height={30}/>
+      <div className='row space-between full-width bottom'>
+        <span className='title-medium-b'>Puntaje record: 45451</span>
+        <Spacer height={45}/>
+        <span className='title-medium-b'>Tu puntaje: 32895</span>
+      </div>
       <h1 className='title row center full-width'>Sílabas - NIVEL {currentLvl}</h1>
       <Spacer height={10}/>
-      <h1 className='title-medium-b row center full-width'>Ordena las sílabas correctamente, haciendo click en cada una, para formar la palabra.</h1>
+      <h2 className='title-medium-b row center full-width'>Ordena las sílabas correctamente, haciendo click en cada una, para formar la palabra.</h2>
       <Spacer height={20}/>
       <div className={`item-1 full-width column space-around center ${styles.exercisesContainer}`}>
         {

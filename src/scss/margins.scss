@@ -15,7 +15,7 @@ $max: 100;
       margin-top: #{$i * $bd-scale}px;
     }
 
-    @media (max-device-width: 600px) {
+    @media (max-width: 600px) {
       .m-top-#{$i} {
         margin-top: #{$i * $bm-scale}px;
       }
@@ -33,7 +33,7 @@ $max: 100;
       margin-right: #{$i * $bd-scale}px;
     }
 
-    @media (max-device-width: 600px) {
+    @media (max-width: 600px) {
       .m-right-#{$i} {
         margin-right: #{$i * $bm-scale}px;
       }
@@ -50,7 +50,7 @@ $max: 100;
       margin-bottom: #{$i * $bd-scale}px;
     }
 
-    @media (max-device-width: 600px) {
+    @media (max-width: 600px) {
       .m-bottom-#{$i} {
         margin-bottom: #{$i * $bm-scale}px;
       }
@@ -67,7 +67,7 @@ $max: 100;
       margin-left: #{$i * $bd-scale}px;
     }
 
-    @media (max-device-width: 600px) {
+    @media (max-width: 600px) {
       .m-left-#{$i} {
         margin-left: #{$i * $bm-scale}px;
       }

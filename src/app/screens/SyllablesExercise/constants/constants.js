@@ -61,10 +61,6 @@ const LVL_3 = [
   {
     syllables: ['ca', 'es', 'jo', 'ra', 'ba'],
     result: 'escarabajo'
-  },
-  {
-    syllables: ['ca', 'es', 'jo', 'ra', 'ba'],
-    result: 'escarabajo'
   }
 ];
 

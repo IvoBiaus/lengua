@@ -7,7 +7,7 @@
   max-width: 420px;
 }
 
-@media (max-device-width: 600px) {
+@media (max-width: 600px) {
   .mainContainer {
     justify-content: space-around;
   }
