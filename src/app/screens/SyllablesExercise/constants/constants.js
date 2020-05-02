@@ -28,7 +28,7 @@ const LVL_2 = [
     result: 'elefante'
   },
   {
-    syllables: ['si', 'ri', 'po', 'ma'],
+    syllables: ['sa', 'ri', 'po', 'ma'],
     result: 'mariposa'
   },
   {
