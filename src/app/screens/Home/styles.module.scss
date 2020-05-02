@@ -12,7 +12,7 @@
   border-radius: 0;
 }
 
-@media (max-device-width: 600px) {
+@media (max-width: 600px) {
   .mainContainer {
     flex-direction: column-reverse;
   }

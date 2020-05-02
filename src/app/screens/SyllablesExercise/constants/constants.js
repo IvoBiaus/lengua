@@ -28,7 +28,7 @@ const LVL_2 = [
     result: 'elefante'
   },
   {
-    syllables: ['si', 'ri', 'po', 'ma'],
+    syllables: ['sa', 'ri', 'po', 'ma'],
     result: 'mariposa'
   },
   {
@@ -57,10 +57,6 @@ const LVL_3 = [
   {
     syllables: ['ce', 'te', 'ri', 'ron', 'no'],
     result: 'rinoceronte'
-  },
-  {
-    syllables: ['ca', 'es', 'jo', 'ra', 'ba'],
-    result: 'escarabajo'
   },
   {
     syllables: ['ca', 'es', 'jo', 'ra', 'ba'],

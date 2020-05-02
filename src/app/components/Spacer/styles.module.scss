@@ -30,7 +30,7 @@ $scale: 1;
     width: #{$i}px;
   }
 
-  @media (max-device-width: 600px) {
+  @media (max-width: 600px) {
     .responsive-width-#{$i} {
       width: #{$i / 2}px;
     }  
@@ -45,7 +45,7 @@ $scale: 1;
     height: #{$i}px;
   }
 
-  @media (max-device-width: 600px) {
+  @media (max-width: 600px) {
     .responsive-height-#{$i} {
       height: #{$i / 2}px;
     }
