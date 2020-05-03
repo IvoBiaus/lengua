@@ -7,6 +7,10 @@
   flex-flow: wrap;
 }
 
+.title {
+  text-align: center;
+}
+
 @media (max-width: 600px) {
   .mainContainer {
     align-items: center;

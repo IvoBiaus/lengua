@@ -27,9 +27,9 @@ function Home() {
         <h1 className='title'>Hola ! Como te llamas?</h1>
         <Spacer height={70} responsive={false}/>
         <form className={`column ${styles.form}`} id='login-form' onSubmit={hanldeSubmit}>
-          <input className={`title half-width ${styles.input}`} type="text" name="name" placeholder='Nombre'/>
+          <input className={`title full-width ${styles.input}`} type="text" name="name" placeholder='Nombre'/>
           <Spacer height={20} responsive={false}/>
-          <input className={`title half-width ${styles.input}`} type="text" name="lastname" placeholder='Apellido'/>
+          <input className={`title full-width ${styles.input}`} type="text" name="lastname" placeholder='Apellido'/>
           <Spacer height={70} responsive={false}/>
         </form>
         <div>
