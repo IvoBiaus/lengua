@@ -7,7 +7,7 @@ import Exercise from './components/Exercise';
 import styles from './styles.module.scss';
 import {LEVELS} from './constants/constants';
 
-function SyllablesExercise() {
+function WordsExercise() {
   const history = useHistory();
 
   const [currentLvl, setCurrentLvl] = useState(1);
@@ -19,7 +19,7 @@ function SyllablesExercise() {
       setlvlData([...LEVELS[currentLvl]]);
     }
     else {
-      history.push(Routes.WORDS);
+      history.push(Routes.HOME);
     }
   }
 
@@ -30,13 +30,13 @@ function SyllablesExercise() {
         <Spacer height={45}/>
         <span className='title-medium-b'>Tu puntaje: 32895</span>
       </div>
-      <h1 className='title row center full-width'>Sílabas - NIVEL {currentLvl}</h1>
+      <h1 className={`title row center full-width ${styles.title}`}>Palabras incorrectas - NIVEL {currentLvl}</h1>
       <Spacer height={10}/>
-      <h2 className='title-medium-b row center full-width'>Ordena las sílabas correctamente, haciendo click en cada una, para formar la palabra.</h2>
+      <h2 className='title-medium-b row center full-width'>Encontra en cada frase la palabra incorrecta. Luego escribila correctamente.</h2>
       <Spacer height={20}/>
       <div className={`item-1 full-width column space-around center ${styles.exercisesContainer}`}>
         {
-          lvlData.map((item) => <Exercise key={`${currentLvl}-${item.result}`} data={item}/>)
+          lvlData.map((item, index) => <Exercise key={`${currentLvl}-${index}`} data={item}/>)
         }
       </div>
       <Spacer height={25}/>
@@ -46,4 +46,4 @@ function SyllablesExercise() {
   );
 }
 
-export default SyllablesExercise;
+export default WordsExercise;

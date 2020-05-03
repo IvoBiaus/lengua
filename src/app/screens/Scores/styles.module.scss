@@ -9,6 +9,7 @@
 
 .usersContainer {
   overflow: auto;
+  flex-flow: wrap;
 }
 
 @media (max-width: 600px) {

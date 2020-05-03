@@ -9,6 +9,7 @@ const Home = lazy(() => import('@/app/screens/Home'));
 const Scores = lazy(() => import('@/app/screens/Scores'));
 const Onboarding = lazy(() => import('@/app/screens/Onboarding'));
 const Syllables = lazy(() => import('@/app/screens/SyllablesExercise'));
+const Words = lazy(() => import('@/app/screens/WordsExercise'));
 
 function AppRoutes() {
   return (
@@ -20,6 +21,7 @@ function AppRoutes() {
             <Route exact path={Routes.SCORES} component={Scores} />
             <Route exact path={Routes.ONBOARDING} component={Onboarding} />
             <Route exact path={Routes.SYLLABLES} component={Syllables} />
+            <Route exact path={Routes.WORDS} component={Words} />
           </Switch>
         </Suspense>
       </div>

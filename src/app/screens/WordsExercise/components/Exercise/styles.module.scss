@@ -1,0 +1,43 @@
+@import '../../../../../scss/variables/colors';
+
+.box {
+  border: solid;
+  border-radius: 20px;
+}
+
+.syllable {
+  @extend .box;
+  cursor: pointer;
+  padding: 10px;
+}
+
+.mainContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.answer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  justify-content: center;
+}
+
+.input {
+  background-color: transparent;
+  border: 0 none $white;
+  border-bottom: 3px solid $white;
+  border-radius: 0;
+}
+
+@media (max-width: 600px) {
+  .mainContainer {
+    flex-direction: column;
+  }
+
+  .answer {
+    flex-direction: column;
+  }
+}
