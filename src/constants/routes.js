@@ -4,6 +4,7 @@ const Routes = {
   ONBOARDING: '/onboarding',
   SYLLABLES: '/syllables',
   WORDS: '/words',
+  EXERCISE_SELECT: '/select'
 };
 
 export default Routes;

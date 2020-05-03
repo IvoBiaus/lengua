@@ -34,18 +34,18 @@ function Exercise({data}) {
     <div className={`full-width m-bottom-1 ${styles.mainContainer}`}>
       <div className='row center'>
         {
-          unused.map((item) => <span className={`title-medium m-right-5 ${styles.syllable}`} onClick={() => addToAnswer(item)} >{item}</span>)
+          unused.map((item, index) => <span className={`title-medium m-right-5 ${styles.syllable}`} key={`unused-${item}-${index}`} onClick={() => addToAnswer(item)} >{item}</span>)
         }
       </div>
       <Spacer width={25} height={30}/>
       <div className={`full-height column center ${styles.answer}`}>
-        <span class="row middle center">Tu respuesta: </span>
+        <span className="row middle center">Tu respuesta: </span>
         <Spacer width={25} height={25}/>
         <div className={`row ${styles.box}`}>
           {
-            userAnswer.map((item) => (
+            userAnswer.map((item, index) => (
               <>
-                <span className={`title-medium  ${styles.syllable}`} onClick={() => removeFromAnswer(item)} >{item}</span>
+                <span className={`title-medium  ${styles.syllable}`} key={`answer-${item}-${index}`} onClick={() => removeFromAnswer(item)} >{item}</span>
                 <Spacer width={5}/>
               </>
             )

@@ -7,8 +7,7 @@ function Exercise({data}) {
   const [userAnswer, setUserAnswer] = useState('');
 
   const handleChange = (event) => {
-    console.log(event);
-    setUserAnswer('input');
+    setUserAnswer(event.target.value);
   }
 
   return (
@@ -18,11 +17,11 @@ function Exercise({data}) {
       </span>
       <Spacer width={25} height={30}/>
       <div className={`full-height column center ${styles.answer}`}>
-        <span class="row middle center title-small">Tu respuesta: </span>
+        <span className="row middle center title-small">Tu respuesta: </span>
         <Spacer width={25} height={25}/>
         <input className={`title-medium-b ${styles.input}`} onChange={handleChange} type="text" />
       </div>
-    <Spacer height={40}/>
+      <Spacer height={40}/>
     </div>
   );
 }
