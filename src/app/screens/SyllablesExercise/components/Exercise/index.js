@@ -31,7 +31,7 @@ function Exercise({data}) {
   }
 
   return (
-    <div className={`full-width ${styles.mainContainer}`}>
+    <div className={`full-width m-bottom-1 ${styles.mainContainer}`}>
       <div className='row center'>
         {
           unused.map((item) => <span className={`title-medium m-right-5 ${styles.syllable}`} onClick={() => addToAnswer(item)} >{item}</span>)

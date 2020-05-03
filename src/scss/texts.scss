@@ -36,6 +36,33 @@ span, h1, h2, h3, h4, h5, h6, p {
   color: $mine-shaft;
 }
 
+@media (max-width: 1280px) {
+  .title {
+    font-size: 48px;
+    color: $white;
+  }
+  
+  .title-medium {
+    font-size: 30px;
+    color: $white;
+  }
+  
+  .title-medium-b {
+    font-size: 22px;
+    color: $mine-shaft;
+  }
+  
+  .title-small {
+    font-size: 24px;
+    color: $white;
+  }
+  
+  .title-small-b {
+    font-size: 18px;
+    color: $mine-shaft;
+  }
+}
+
 @media (max-width: 600px) {
   .title {
     font-size: 32px;

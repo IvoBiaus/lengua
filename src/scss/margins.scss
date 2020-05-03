@@ -1,9 +1,10 @@
 /* stylelint-disable selector-class-pattern  */
 
-$bm-scale: 2;
-$bd-scale: 5;
+$mobile-scale: 2;
+$medium-desktop-scale: 3;
+$desktop-scale: 5;
 
-$min: 2;
+$min: 1;
 $max: 100;
 
 // Top margins
@@ -12,12 +13,18 @@ $max: 100;
   @for $i from $min through $max {
 
     .m-top-#{$i} {
-      margin-top: #{$i * $bd-scale}px;
+      margin-top: #{$i * $desktop-scale}px;
+    }
+
+    @media (max-width: 1280px) {
+      .m-top-#{$i} {
+        margin-top: #{$i * $medium-desktop-scale}px;
+      }
     }
 
     @media (max-width: 600px) {
       .m-top-#{$i} {
-        margin-top: #{$i * $bm-scale}px;
+        margin-top: #{$i * $mobile-scale}px;
       }
     }
     
@@ -30,12 +37,18 @@ $max: 100;
   @for $i from $min through $max {
 
     .m-right-#{$i} {
-      margin-right: #{$i * $bd-scale}px;
+      margin-right: #{$i * $desktop-scale}px;
+    }
+
+    @media (max-width: 1280px) {
+      .m-right-#{$i} {
+        margin-right: #{$i * $medium-desktop-scale}px;
+      }
     }
 
     @media (max-width: 600px) {
       .m-right-#{$i} {
-        margin-right: #{$i * $bm-scale}px;
+        margin-right: #{$i * $mobile-scale}px;
       }
     }
   }
@@ -47,12 +60,18 @@ $max: 100;
   @for $i from $min through $max {
 
     .m-bottom-#{$i} {
-      margin-bottom: #{$i * $bd-scale}px;
+      margin-bottom: #{$i * $desktop-scale}px;
+    }
+
+    @media (max-width: 1280px) {
+      .m-bottom-#{$i} {
+        margin-bottom: #{$i * $medium-desktop-scale}px;
+      }
     }
 
     @media (max-width: 600px) {
       .m-bottom-#{$i} {
-        margin-bottom: #{$i * $bm-scale}px;
+        margin-bottom: #{$i * $mobile-scale}px;
       }
     }
   }
@@ -64,12 +83,18 @@ $max: 100;
   @for $i from $min through $max {
 
     .m-left-#{$i} {
-      margin-left: #{$i * $bd-scale}px;
+      margin-left: #{$i * $desktop-scale}px;
     }
 
     @media (max-width: 600px) {
       .m-left-#{$i} {
-        margin-left: #{$i * $bm-scale}px;
+        margin-left: #{$i * $medium-desktop-scale}px;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .m-left-#{$i} {
+        margin-left: #{$i * $mobile-scale}px;
       }
     }
   }

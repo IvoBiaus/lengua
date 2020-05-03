@@ -1,7 +1,8 @@
 /* stylelint-disable selector-class-pattern  */
 
-$bm-scale: 2;
-$bd-scale: 5;
+$mobile-scale: 2;
+$medium-desktop-scale: 3;
+$desktop-scale: 5;
 
 $min: 2;
 $max: 100;
@@ -12,12 +13,18 @@ $max: 100;
   @for $i from $min through $max {
 
     .p-top-#{$i} {
-      padding-top: #{$i * $bd-scale}px;
+      padding-top: #{$i * $desktop-scale}px;
+    }
+
+    @media (max-width: 1280px) {
+      .p-top-#{$i} {
+        padding-top: #{$i * $medium-desktop-scale}px;
+      }
     }
 
     @media (max-width: 600px) {
       .p-top-#{$i} {
-        padding-top: #{$i * $bm-scale}px;
+        padding-top: #{$i * $mobile-scale}px;
       }
     }
   }
@@ -29,12 +36,18 @@ $max: 100;
   @for $i from $min through $max {
 
     .p-right-#{$i} {
-      padding-right: #{$i * $bd-scale}px;
+      padding-right: #{$i * $desktop-scale}px;
+    }
+
+    @media (max-width: 1280px) {
+      .p-right-#{$i} {
+        padding-right: #{$i * $medium-desktop-scale}px;
+      }
     }
 
     @media (max-width: 600px) {
       .p-right-#{$i} {
-        padding-right: #{$i * $bm-scale}px;
+        padding-right: #{$i * $mobile-scale}px;
       }
     }
   }
@@ -46,12 +59,18 @@ $max: 100;
   @for $i from $min through $max {
 
     .p-bottom-#{$i} {
-      padding-bottom: #{$i * $bd-scale}px;
+      padding-bottom: #{$i * $desktop-scale}px;
+    }
+
+    @media (max-width: 1280px) {
+      .p-bottom-#{$i} {
+        padding-bottom: #{$i * $medium-desktop-scale}px;
+      }
     }
     
     @media (max-width: 600px) {
       .p-bottom-#{$i} {
-        padding-bottom: #{$i * $bm-scale}px;
+        padding-bottom: #{$i * $mobile-scale}px;
       }
     }
   }
@@ -63,12 +82,18 @@ $max: 100;
   @for $i from $min through $max {
 
     .p-left-#{$i} {
-      padding-left: #{$i * $bd-scale}px;
+      padding-left: #{$i * $desktop-scale}px;
+    }
+
+    @media (max-width: 1280px) {
+      .p-left-#{$i} {
+        padding-left: #{$i * $medium-desktop-scale}px;
+      }
     }
 
     @media (max-width: 600px) {
       .p-left-#{$i} {
-        padding-left: #{$i * $bm-scale}px;
+        padding-left: #{$i * $mobile-scale}px;
       }
     }
   }

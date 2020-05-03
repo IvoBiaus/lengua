@@ -30,6 +30,12 @@ $scale: 1;
     width: #{$i}px;
   }
 
+  @media (max-width:1280px) {
+    .responsive-width-#{$i} {
+      width: #{$i*0.75}px;
+    }  
+  }
+
   @media (max-width: 600px) {
     .responsive-width-#{$i} {
       width: #{$i / 2}px;
@@ -43,6 +49,12 @@ $scale: 1;
 
   .responsive-height-#{$i} {
     height: #{$i}px;
+  }
+
+  @media (max-width: 1280px) {
+    .responsive-height-#{$i} {
+      height: #{$i*0.75}px;
+    }
   }
 
   @media (max-width: 600px) {

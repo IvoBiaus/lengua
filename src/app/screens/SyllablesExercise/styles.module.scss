@@ -2,15 +2,13 @@
   align-items: flex-end;
 }
 
-
+.exercisesContainer {
+  overflow: auto;
+  flex-flow: wrap;
+}
 
 @media (max-width: 600px) {
   .mainContainer {
     align-items: center;
-  }
-
-  .exercisesContainer {
-    overflow: auto;
-    flex-flow: wrap;
   }
 }
