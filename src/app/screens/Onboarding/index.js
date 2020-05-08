@@ -16,7 +16,7 @@ function Onboarding() {
       setStep(step+1);
     }
     else {
-      history.push(Routes.SYLLABLES);
+      history.push(Routes.EXERCISE_SELECT);
     }
   }
 

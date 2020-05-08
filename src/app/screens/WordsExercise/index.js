@@ -19,7 +19,7 @@ function WordsExercise() {
       setlvlData([...LEVELS[currentLvl]]);
     }
     else {
-      history.push(Routes.HOME);
+      history.push(Routes.EXERCISE_SELECT);
     }
   }
 

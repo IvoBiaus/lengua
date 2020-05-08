@@ -1,0 +1,18 @@
+.mainContainer {
+  align-items: flex-end;
+}
+
+.image {
+  max-width: 800px;
+}
+
+.exercisesContainer {
+  overflow: auto;
+  flex-flow: wrap;
+}
+
+@media (max-width: 600px) {
+  .mainContainer {
+    align-items: center;
+  }
+}
