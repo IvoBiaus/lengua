@@ -12,8 +12,8 @@ const LVL_1 = [
 
   },
   {
-    correctAnswers: ['Si'],
-    sentence: '¿De regalo, pedirías un perrito como Luciano?.'
+    correctAnswers: ['Raton'],
+    sentence: '¿Qué tipo de animal es la mascota?.'
   }
 ];
 

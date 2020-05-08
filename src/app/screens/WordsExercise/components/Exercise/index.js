@@ -11,7 +11,7 @@ function Exercise({data}) {
   }
 
   return (
-    <div className={`full-width m-bottom-1 ${styles.mainContainer}`}>
+    <div className={`full-width m-bottom-1 m-top-6 ${styles.mainContainer}`}>
       <span className='title-medium-b'>
         {data.sentence}
       </span>
@@ -21,7 +21,6 @@ function Exercise({data}) {
         <Spacer width={25} height={25}/>
         <input className={`title-medium-b ${styles.input}`} onChange={handleChange} type="text" />
       </div>
-      <Spacer height={40}/>
     </div>
   );
 }

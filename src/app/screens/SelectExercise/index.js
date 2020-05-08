@@ -19,7 +19,7 @@ function SelectExercise() {
         <button className={`button full-width title-medium-b primary m-bottom-5 p-left-5 p-right-5 ${styles.button}`} id={Routes.WORDS} onClick={handleSelection}>PALABRAS INCORRECTAS</button>
         <button className={`button full-width title-medium-b primary p-left-5 p-right-5 ${styles.button}`} id={Routes.READING} onClick={handleSelection}>COMPRENSIÓN LECTORA</button>
       </div>
-      <button className={`button full-width title-medium-b secondary m-bottom-5 p-left-5 p-right-5 ${styles.button}`} id={Routes.HOME} onClick={handleSelection}>FINALIZAR</button>
+      <button className={`button half-width title-medium-b secondary m-bottom-5 p-left-5 p-right-5 ${styles.button}`} id={Routes.HOME} onClick={handleSelection}>FINALIZAR</button>
     </div>
   );
 }

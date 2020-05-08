@@ -2,6 +2,10 @@
   align-items: flex-end;
 }
 
+.image {
+  max-width: 800px;
+}
+
 .exercisesContainer {
   overflow: auto;
   flex-flow: wrap;

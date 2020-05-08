@@ -34,21 +34,22 @@ import ReadingImg3 from './assets/img3.JPG';
         <span className='title-medium-b'>Tu puntaje: 32895</span>
       </div>
       <Spacer height={20}/>
-      <h1 className={`title row center full-width ${styles.title}`}>Contesta - NIVEL {currentLvl}</h1>
+      <h1 className='title row center full-width'>Contesta - NIVEL {currentLvl}</h1>
       <h2 className='title-medium-b row center full-width'>Pon a prueba tu compresión lectora. Contesta las siguientes preguntas.</h2>
-      <div className={`item-1 medium-width column space-around center ${styles.exercisesContainer}`}>
-      {currentLvl===1 &&
-      <img className={`medium-width column space-around  ${styles.image}`} src={ReadingImg} alt="Reading" />
-      }
-      {currentLvl===2 &&
-      <img className={`medium-width column space-around  ${styles.image}`} src={ReadingImg2} alt="Reading" />
-      }
-      {currentLvl===3 &&
-      <img className={`medium-width column space-around  ${styles.image}`} src={ReadingImg3} alt="Reading" />
-      }
-     {
-        lvlData.map((item, index) => <Exercise key={`${currentLvl}-${index}`} data={item}/>)
-     }
+      <Spacer height={20}/>
+      <div className={`item-1 full-width column space-around center ${styles.exercisesContainer}`}>
+        {currentLvl===1 &&
+          <img className={`full-width column space-around ${styles.image}`} src={ReadingImg} alt="Reading" />
+        }
+        {currentLvl===2 &&
+          <img className={`full-width column space-around ${styles.image}`} src={ReadingImg2} alt="Reading" />
+        }
+        {currentLvl===3 &&
+          <img className={`full-width column space-around ${styles.image}`} src={ReadingImg3} alt="Reading" />
+        }
+        {
+          lvlData.map((item, index) => <Exercise key={`${currentLvl}-${index}`} data={item}/>)
+        }
      </div>
       <Spacer height={25}/>
       <button className='button primary' onClick={handleNext}>CONTINUAR</button>

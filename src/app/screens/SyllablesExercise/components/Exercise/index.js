@@ -31,7 +31,7 @@ function Exercise({data}) {
   }
 
   return (
-    <div className={`full-width m-bottom-1 ${styles.mainContainer}`}>
+    <div className={`full-width m-bottom-1 m-top-6 ${styles.mainContainer}`}>
       <div className='row center'>
         {
           unused.map((item, index) => <span className={`title-medium m-right-5 ${styles.syllable}`} key={`unused-${item}-${index}`} onClick={() => addToAnswer(item)} >{item}</span>)
@@ -53,7 +53,6 @@ function Exercise({data}) {
           }
         </div>
       </div>
-    <Spacer height={40}/>
     </div>
   );
 }
