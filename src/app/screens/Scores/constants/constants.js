@@ -4,59 +4,59 @@ export const MOCKED_USERS = [
     score: 54000,
   },
   {
-    user: 'Hermione Granger',
+    user: 'Harry Potter',
     score: 53000,
   },  
   {
-    user: 'Hermione Granger',
+    user: 'Lord Voldemort',
     score: 50000,
   },  
   {
-    user: 'Hermione Granger',
+    user: 'Draco Malfoy',
     score: 45000,
   },  
   {
-    user: 'Hermione Granger',
+    user: 'Ron Weasley',
     score: 43000,
   },  
   {
-    user: 'Hermione Granger',
+    user: 'Severus Snape',
     score: 40000,
   },  
   {
-    user: 'Hermione Granger',
+    user: 'Albus Dumbledore',
     score: 30000,
   },  
   {
-    user: 'Hermione Granger',
+    user: 'Rebeus Hagrid',
     score: 28000,
   },  
   {
-    user: 'Hermione Granger',
+    user: 'Luna Lovegood',
     score: 26000,
   },  
   {
-    user: 'Hermione Granger',
+    user: 'Neville Longbottom',
     score: 25000,
   },  
   {
-    user: 'Hermione Granger',
+    user: 'Minerva McGonagall',
     score: 13000,
   },  
   {
-    user: 'Hermione Granger',
+    user: 'Dobby',
     score: 9000,
   },  
   {
-    user: 'Hermione Granger',
+    user: 'Dolores Umbridge',
     score: 5000,
   },  
   {
-    user: 'Hermione Granger',
+    user: 'Bellatrix Lestrange',
     score: 3000,
   },  
   {
-    user: 'Hermione Granger',
+    user: 'Remus Lupin',
     score: 1000,
   },
 ]

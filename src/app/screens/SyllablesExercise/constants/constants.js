@@ -10,7 +10,7 @@ const LVL_1 = [
   },
   {
     syllables: ['bu', 'ti', 'rón'],
-    result: 'tibutón'
+    result: 'tiburón'
   },
   {
     syllables: ['ga', 'mi', 'hor'],
