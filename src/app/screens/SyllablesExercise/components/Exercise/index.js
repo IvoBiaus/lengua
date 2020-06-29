@@ -3,20 +3,25 @@ import React, { useState } from 'react';
 import styles from './styles.module.scss';
 import Spacer from '@/app/components/Spacer';
 
-function Exercise({data}) {
+function Exercise({data, addScore, removeScore, points}) {
   const [unused, setUnused] = useState(data.syllables);
   const [userAnswer, setUserAnswer] = useState([]);
+  const [wasCorrect, setWasCorrect] = useState(false);
 
   const addToAnswer = (syllable) => {
     const index = unused.indexOf(syllable);
     if (index > -1) {
-      //TODO disable handle once the option is selected. Create a sub-component for the Syllable
-      //unused.splice(index, 1)
-      //setUnused([...unused]);
+      unused.splice(index, 1)
+      setUnused([...unused]);
     }
-
     userAnswer.push(syllable)
     setUserAnswer([...userAnswer]);
+
+    const answer = userAnswer.join("");
+    if(answer === data.result){
+      setWasCorrect(true);
+      addScore(points);
+    }
   }
 
   const removeFromAnswer = (syllable) => {
@@ -25,9 +30,13 @@ function Exercise({data}) {
       userAnswer.splice(index, 1)
       setUserAnswer([...userAnswer]);
     }
-    //TODO enable handle once the option is selected. Create a sub-component for the Syllable
-    //unused.push(syllable)
-    //setUnused([...unused]);
+    unused.push(syllable)
+    setUnused([...unused]);
+
+    if(wasCorrect) {
+      setWasCorrect(false);
+      removeScore(points);
+    }
   }
 
   return (

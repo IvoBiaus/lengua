@@ -10,12 +10,16 @@
   border: 0 none $white;
   border-bottom: 3px solid $white;
   border-radius: 0;
-  max-width: 360px;
+  max-width: 420px;
 }
 
 @media (max-width: 600px) {
   .mainContainer {
     flex-direction: column-reverse;
+  }
+
+  .auth {
+    flex-direction: column;
   }
 
   .image {
