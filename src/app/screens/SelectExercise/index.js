@@ -1,15 +1,25 @@
 import React from 'react';
 import { useHistory } from "react-router-dom";
+import { useDispatch } from 'react-redux';
 
+
+import actions from '../../../redux/Auth/actions';
 import Routes from '@/constants/routes';
 import styles from './styles.module.scss';
 
 function SelectExercise() {
   const history = useHistory();
+  const dispatch = useDispatch();
 
   const handleSelection = (event) => {
     history.push(event.target.id);
   }
+
+  const handleLogout = (event) => {
+    dispatch(actions.logoutUser());
+    history.push(Routes.HOME);
+  }
+
 
   return (
     <div className='item-1 full-height column space-around center p-left-10 p-right-10'>
@@ -19,7 +29,7 @@ function SelectExercise() {
         <button className={`button full-width title-medium-b primary m-bottom-5 p-left-5 p-right-5 ${styles.button}`} id={Routes.WORDS} onClick={handleSelection}>PALABRAS INCORRECTAS</button>
         <button className={`button full-width title-medium-b primary p-left-5 p-right-5 ${styles.button}`} id={Routes.READING} onClick={handleSelection}>COMPRENSIÓN LECTORA</button>
       </div>
-      <button className={`button half-width title-medium-b secondary m-bottom-5 p-left-5 p-right-5 ${styles.button}`} id={Routes.HOME} onClick={handleSelection}>FINALIZAR</button>
+      <button className={`button half-width title-medium-b secondary m-bottom-5 p-left-5 p-right-5 ${styles.button}`} id={Routes.HOME} onClick={handleLogout}>FINALIZAR</button>
     </div>
   );
 }
