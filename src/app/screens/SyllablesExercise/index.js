@@ -31,13 +31,34 @@ function SyllablesExercise() {
     setTopPlayerScore(score);
   };
 
+  const saveGame = () => {
+    const savedGame = {lvl: currentLvl+1, score: gameScore + lvlScore };
+    localStorage.setItem("syllables", JSON.stringify(savedGame));
+  }
+
+  const loadGame = () => {
+    const savedGame = JSON.parse(localStorage.getItem("syllables"));
+    if(savedGame) {
+      setCurrentLvl(savedGame.lvl);
+      setGameScore(savedGame.score);
+    }
+  }
+  
+  const deleteSavedGame = () => {
+    localStorage.removeItem("syllables");
+  }
+
   useEffect(() => {
+    if(currentLvl === 1){
+      loadGame();
+    }
     dispatch(actions.getSyllablesExercises(currentLvl));
     getTopPlayer();
   }, [currentLvl, dispatch]);
   
   const handleNext = () => {
     if(currentLvl < 3){
+      saveGame();
       setGameScore(gameScore + lvlScore);
       setLvlScore(0);
       setCurrentLvl(currentLvl+1);
@@ -49,15 +70,21 @@ function SyllablesExercise() {
         score: gameScore + lvlScore
       };
       setScore(userScore);
+      deleteSavedGame();
       history.push(Routes.EXERCISE_SELECT);
     }
   }
 
+  const handleExit = () => {
+    deleteSavedGame();
+    history.push(Routes.EXERCISE_SELECT);
+  }
+
   return (
     <div className={`item-1 full-height column space-around p-left-10 p-right-10 ${styles.mainContainer}`}>
-      <div className='row space-between full-width bottom'>
+      <div className={`row space-between full-width middle ${styles.scoreBar}`}>
         <span className='title-medium-b'>Puntaje record: {topPlayerScore}</span>
-        <Spacer height={45}/>
+        <button className={`button secondary title-medium-b ${styles.goBack}`} onClick={handleExit}>Salir</button>
         <span className='title-medium-b'>Tu puntaje: {gameScore}</span>
       </div>
       <h1 className='title row center full-width'>Sílabas - NIVEL {currentLvl}</h1>

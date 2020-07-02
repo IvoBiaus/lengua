@@ -11,6 +11,15 @@
   flex-flow: wrap;
 }
 
+.scoreBar {
+  margin-top: 10px;
+}
+
+.goBack {
+  width: min-content;
+  padding: 0 15px;
+}
+
 @media (max-width: 600px) {
   .mainContainer {
     align-items: center;

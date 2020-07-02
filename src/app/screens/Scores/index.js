@@ -26,7 +26,7 @@ function Scores() {
 
   useEffect(() => {
     getAllScores();
-  });
+  }, []);
 
   return (
     <div className={`item-1 full-height row p-left-10 p-right-10 ${styles.mainContainer}`}>
