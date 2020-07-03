@@ -3,12 +3,19 @@ import React, { useState } from 'react';
 import styles from './styles.module.scss';
 import Spacer from '@/app/components/Spacer';
 
-function Exercise({data}) {
-  const [userAnswer, setUserAnswer] = useState('');
+function Exercise({data, addScore, removeScore, points}) {
+  const [wasCorrect, setWasCorrect] = useState(false);
 
   const handleChange = (event) => {
-    setUserAnswer(event.target.value);
+  if(data.correctAnswers.includes(event.target.value) && !wasCorrect ){
+    setWasCorrect(true);
+    addScore(points);
   }
+  if(!data.correctAnswers.includes(event.target.value) && wasCorrect ){
+    setWasCorrect(false);
+    removeScore(points);
+  }
+}
 
   return (
     <div className={`full-width m-bottom-1 m-top-6 ${styles.mainContainer}`}>
