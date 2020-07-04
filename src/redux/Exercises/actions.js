@@ -1,8 +1,8 @@
 import { createTypes } from 'redux-recompose';
 
-import { getWordsExercises, getSyllablesExercises } from '../../services/exercises';
+import { getWordsExercises, getSyllablesExercises, getReadingExercises } from '../../services/exercises';
 
-export const actions = createTypes(['GET_WORDS', 'GET_SYLLABLES'], '@@EXERCISES');
+export const actions = createTypes(['GET_WORDS', 'GET_SYLLABLES', 'GET_READINGS'], '@@EXERCISES');
 
 const actionCreators = {
   getWordsExercises: (lvl) => ({
@@ -17,6 +17,14 @@ const actionCreators = {
     type: actions.GET_SYLLABLES,
     target: 'syllables',
     service: getSyllablesExercises,
+    payload: lvl,
+    successSelector: response => response.data.data,
+    failureSelector: response => response.data?.message
+  }),
+  getReadingExercises: (lvl) => ({
+    type: actions.GET_READINGS,
+    target: 'readings',
+    service: getReadingExercises,
     payload: lvl,
     successSelector: response => response.data.data,
     failureSelector: response => response.data?.message
